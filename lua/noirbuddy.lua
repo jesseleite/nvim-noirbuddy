@@ -51,6 +51,7 @@ Group.new('@comment', colors.grey_7)
 Group.new('@punctuation', colors.grey_2)
 Group.new('@punctuation.bracket', colors.grey_2)
 Group.new('@punctuation.delimiter', colors.grey_2)
+Group.new('@punctuation.special', colors.grey_2)
 Group.new('@constant', colors.grey_2)
 Group.new('@constant.builtin', colors.grey_2)
 Group.new('@constant.macro', colors.grey_2)
@@ -94,6 +95,8 @@ Group.new('@include', colors.grey_2)
 Group.new('@preproc', colors.grey_2)
 Group.new('@debug', colors.grey_2)
 Group.new('@tag', colors.grey_2)
+Group.new('@tag.attribute', colors.grey_2)
+Group.new('@tag.delimiter', colors.grey_2)
   -- TODO... This section needs work for sure
 
 -- Semantic Highlighting
