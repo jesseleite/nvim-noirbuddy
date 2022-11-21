@@ -110,6 +110,8 @@ function M.setup(opts)
     Group.new('WildMenu', colors.grey_5, colors.grey_8)
     -- TODO... This section needs work for sure
 
+    -- Treesitter Syntax Highlighting
+    -- See :help treesitter-highlight-groups
     Group.new('@include', colors.grey_6)
     Group.new('@keyword', colors.grey_5)
     Group.new('@variable', colors.grey_2)
@@ -129,8 +131,7 @@ function M.setup(opts)
     Group.new('@tag.delimiter', colors.grey_3)
     Group.new('@type', colors.grey_3)
 
-    -- Treesitter Syntax Highlighting
-    -- See :help treesitter-highlight-groups
+    -- TODO: The ones below need further testing
     Group.new('@text.literal', colors.secondary)
     Group.new('@text.reference', colors.secondary)
     Group.new('@text.title', colors.grey_2)
