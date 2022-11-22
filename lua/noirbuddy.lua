@@ -8,6 +8,8 @@ local M = {}
 -- Provide the options for the user to setup their own primary and secondary colors
 -- TODO: ? Maybe include entire presets as options?
 function M.setup(opts)
+    require('colorbuddy').colorscheme('noirbuddy')
+
     opts = opts or {}
 
     -- Set up primary and secondary colour palette
