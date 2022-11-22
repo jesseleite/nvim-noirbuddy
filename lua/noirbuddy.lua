@@ -171,9 +171,9 @@ function M.setup(opts)
     Group.new('@preproc', colors.grey_2)
     Group.new('@debug', colors.grey_2)
     Group.new('@keyword.operator', colors.secondary)
-    -- Group.new('@string', colors.grey_2)
-    -- Group.new('@string.escape', colors.grey_2)
-    -- Group.new('@string.special', colors.grey_2)
+    Group.new('@string', colors.primary)
+    Group.new('@string.escape', colors.grey_2)
+    Group.new('@string.special', colors.grey_2)
     -- TODO... This section needs work for sure
 
     -- Semantic Highlighting
