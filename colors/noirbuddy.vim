@@ -1,1 +1,1 @@
-lua require('colorbuddy').colorscheme('noirbuddy')
+lua require('noirbuddy').setup()
