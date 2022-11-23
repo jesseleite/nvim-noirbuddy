@@ -1,6 +1,6 @@
 return {
   primary = '#ff0088',
-  secondary = '#56c5cc',
+  secondary = '#ff339f',
   diagnostic_error = '#ff0088',
   diagnostic_warning = '#f7aa1c',
   diagnostic_info = '#56c5cc',
