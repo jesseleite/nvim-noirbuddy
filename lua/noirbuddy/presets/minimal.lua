@@ -5,7 +5,7 @@ return {
     diagnostic_warning = "#ff7700",
     diagnostic_info = "#d5d5d5",
     diagnostic_hint = "#f5f5f5",
-    diff_add = "#00ff77",
-    diff_change = "#d5d5d5",
-    diff_delete = "#ff0038",
+    diff_add = "#f5f5f5",
+    diff_change = "#737373",
+    diff_delete = "#ff0088",
 }
