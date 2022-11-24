@@ -1,4 +1,4 @@
 return {
   primary = '#00FF00',
-  secondary = '#009100',
+  bgcolor = '#1f241f',
 }
