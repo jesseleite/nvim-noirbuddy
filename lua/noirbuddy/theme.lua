@@ -127,11 +127,11 @@ Group.new('@string.special', colors.gray_2)
 
 -- Semantic Highlighting
 Group.new('DiagnosticError', colors.diagnostic_error, nil, styles.italic + styles.undercurl)
-Group.new('DiagnosticWarning', colors.diagnostic_warning, nil, styles.italic + styles.undercurl)
+Group.new('DiagnosticWarn', colors.diagnostic_warning, nil, styles.italic + styles.undercurl)
 Group.new('DiagnosticInfo', colors.diagnostic_info, nil, styles.italic + styles.undercurl)
 Group.new('DiagnosticHint', colors.diagnostic_hint, nil, styles.italic + styles.undercurl)
 Group.new('DiagnosticSignError', colors.diagnostic_error)
-Group.new('DiagnosticSignWarning', colors.diagnostic_warning)
+Group.new('DiagnosticSignWarn', colors.diagnostic_warning)
 Group.new('DiagnosticSignInfo', colors.diagnostic_info)
 Group.new('DiagnosticSignHint', colors.diagnostic_hint)
 Group.new('DiffAdd', colors.diff_add)

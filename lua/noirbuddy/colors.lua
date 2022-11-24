@@ -3,10 +3,10 @@ local Color = require('colorbuddy').Color
 local M = {}
 
 function M.setup(opts)
-  defaultPreset = require('noirbuddy.presets.default')
-  userPreset = require('noirbuddy.presets.' .. (opts.preset or 'default'))
+  local defaultPreset = require('noirbuddy.presets.default')
+  local userPreset = require('noirbuddy.presets.' .. (opts.preset or 'default'))
 
-  getConfiguredColor = function(color)
+  local getConfiguredColor = function(color)
     return opts[color] or userPreset[color] or defaultPreset[color]
   end
 
