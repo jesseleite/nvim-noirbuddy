@@ -1,3 +1,4 @@
+-- Inspired by Dimitar Dimitrov's "Noirblaze" theme, from whence "Noirbuddy" was birthed <3
 return {
   primary = '#ff0088',
   secondary = '#a7a7a7',
