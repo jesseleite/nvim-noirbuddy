@@ -2,18 +2,25 @@ local Color = require('colorbuddy').Color
 
 local M = {}
 
+function M.getPreset(preset)
+  return require('noirbuddy.presets.' .. preset)
+end
+
+function M.mergeWithPreset(preset, colors)
+  return vim.tbl_extend('force', M.getPreset(preset), colors)
+end
+
 function M.setup(opts)
-  local defaultPreset = require('noirbuddy.presets.minimal')
-  local userPreset = require('noirbuddy.presets.' .. (opts.preset or 'minimal'))
+  local preset = M.getPreset(opts.preset or 'minimal')
 
   local getConfiguredColor = function(color)
-    return opts[color] or userPreset[color] or defaultPreset[color]
+    return opts[color] or preset[color]
   end
 
   -- Set up background color
   -- Can be configured by preset or end user
   -- TODO: Can we eventually change to `background` or `bg`? (colorbuddy issue?)
-  Color.new('bgcolor', opts['bgcolor'] or userPreset['bgcolor'] or '#121212')
+  Color.new('bgcolor', getConfiguredColor('bgcolor') or '#121212')
 
   -- Set up primary and secondary flavor colors
   -- Can be configured by preset or end user

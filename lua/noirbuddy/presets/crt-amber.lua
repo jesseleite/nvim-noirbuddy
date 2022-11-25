@@ -1,4 +1,6 @@
-return {
-  primary = '#f9ad2b',
-  bgcolor = '#260b00',
-}
+local colors = require('noirbuddy.colors')
+
+return colors.mergeWithPreset('minimal', {
+  primary = '#FFA227',
+  bgcolor = '#26140D',
+})
