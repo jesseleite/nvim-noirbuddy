@@ -7,7 +7,7 @@ Group.new('Normal', colors.gray_4, colors.bgcolor)
 Group.new('Search', colors.black, colors.white)
 Group.new('IncSearch', colors.black, colors.white)
 Group.new('Visual', nil, colors.gray_8)
-Group.new('SignColumn', nil, colors.black)
+Group.new('SignColumn', nil, colors.bgcolor)
 Group.new('LineNr', colors.gray_8, colors.bgcolor)
 
 Group.new('Comment', colors.gray_7)
