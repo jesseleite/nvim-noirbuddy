@@ -1,3 +1,6 @@
 require('noirbuddy.plugins.signify')
 require('noirbuddy.plugins.nvim-tree')
 require('noirbuddy.plugins.lualine')
+require('noirbuddy.plugins.fugitive')
+require('noirbuddy.plugins.telescope')
+require('noirbuddy.plugins.harpoon')
