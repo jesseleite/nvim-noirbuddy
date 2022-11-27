@@ -9,6 +9,7 @@ Group.new('IncSearch', colors.black, colors.white)
 Group.new('Visual', nil, colors.gray_8)
 Group.new('SignColumn', nil, colors.bgcolor)
 Group.new('LineNr', colors.gray_8, colors.bgcolor)
+Group.new("EndOfBuffer", colors.gray_8, nil)
 
 Group.new('Comment', colors.gray_7)
 Group.new('Constant', colors.primary)
