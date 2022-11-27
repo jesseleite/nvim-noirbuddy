@@ -3,7 +3,9 @@ local M = {}
 function M.setup(opts)
   opts = opts or {}
 
-  require('colorbuddy').colorscheme('noirbuddy')
+  require('colorbuddy').colorscheme('noirbuddy', false, {
+    disable_defaults = true,
+  })
   -- TODO: Discuss this...
   -- require('colorbuddy')
 
