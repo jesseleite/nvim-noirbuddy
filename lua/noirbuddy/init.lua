@@ -6,8 +6,6 @@ function M.setup(opts)
   require('colorbuddy').colorscheme('noirbuddy', false, {
     disable_defaults = true,
   })
-  -- TODO: Discuss this...
-  -- require('colorbuddy')
 
   require('noirbuddy.colors').setup(opts)
   require('noirbuddy.theme')
