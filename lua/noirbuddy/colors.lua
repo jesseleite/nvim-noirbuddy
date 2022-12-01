@@ -20,7 +20,7 @@ function M.setup(opts)
   -- Set up background color
   -- Can be configured by preset or end user
   -- TODO: Can we eventually change to `background` or `bg`? (colorbuddy issue?)
-  Color.new('bgcolor', getConfiguredColor('bgcolor') or '#121212')
+  Color.new('bgcolor', getConfiguredColor('background') or '#121212')
 
   -- Set up primary and secondary flavor colors
   -- Can be configured by preset or end user

@@ -2,5 +2,5 @@
 return require('noirbuddy.colors').mergeWithPreset('minimal', {
   primary = '#E4609B',
   secondary = '#47BAC0',
-  bgcolor = '#18181A',
+  background = '#18181A',
 })
