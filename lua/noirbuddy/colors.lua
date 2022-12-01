@@ -41,8 +41,6 @@ function M.setup(opts)
   -- Set up grayscale palette
   -- The rest of the theme is based on this grayscale palette, hence the name 'noir' buddy
   Color.new('black', '#121212')
-  Color.new('gray_11', '#787878') -- TODO: This is almost identical to gray_6?
-  Color.new('gray_10', '#b0b0b0') -- TODO: This is almost identical to gray_3?
   Color.new('gray_9', '#212121')
   Color.new('gray_8', '#323232')
   Color.new('gray_7', '#535353')
