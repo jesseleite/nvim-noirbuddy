@@ -1,4 +1,5 @@
 local Color = require('colorbuddy').Color
+local colors = require('colorbuddy').colors
 
 local M = {}
 
@@ -8,6 +9,16 @@ end
 
 function M.mergeWithPreset(preset, colors)
   return vim.tbl_extend('force', M.getPreset(preset), colors)
+end
+
+function M.all()
+  local c = {}
+
+  for name,_ in pairs(colors) do
+    c[name] = colors[name]:to_vim()
+  end
+
+  return c;
 end
 
 function M.setup(opts)
