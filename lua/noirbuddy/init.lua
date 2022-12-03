@@ -8,7 +8,7 @@ function M.setup(opts)
   })
 
   require('noirbuddy.colors').setup(opts)
-  require('noirbuddy.theme')
+  require('noirbuddy.theme').setup(opts)
   require('noirbuddy.plugins')
   require('noirbuddy.languages')
 end
