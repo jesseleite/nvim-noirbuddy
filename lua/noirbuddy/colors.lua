@@ -52,6 +52,7 @@ function M.setup(opts)
 
   -- Set up grayscale palette
   -- The rest of the theme is based on this grayscale palette, hence the name 'noir' buddy
+  -- TODO: Should we rename all of the "grey" colors to something more genereic, so that it would make sense in the context of themes that don't use grey but are still monochrome
   Color.new('black', '#121212')
   Color.new('gray_9', '#212121')
   Color.new('gray_8', '#323232')

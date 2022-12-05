@@ -2,11 +2,8 @@ local Group = require('colorbuddy').Group
 local colors = require('colorbuddy').colors
 local styles = require('colorbuddy').styles
 
-local M = {}
-
-function M.setup(opts)
-  opts = opts or {}
-
+-- We need this function because we can't do styles.NONE + styles.NONE (we need to ensure it's only added once)
+local parseStyles = function(opts)
   -- TODO: Should this be included with the presets?
   opts["styles"] = opts["styles"] or {
     italic = false,
@@ -22,18 +19,27 @@ function M.setup(opts)
     bold = opts["styles"]["bold"] and styles.bold or styles.NONE,
   }
 
-  -- We need this function because we can't do styles.NONE + styles.NONE (we need to ensure it's only added once)
-  local sumStyleValues = function(values)
-    local sum = styles.NONE;
+  return s
+end
 
-    for _, value in ipairs(values) do
-      if value ~= styles.NONE then
-        sum = sum + value
-      end
+local sumStyleValues = function(values)
+  local sum = styles.NONE;
+
+  for _, value in ipairs(values) do
+    if value ~= styles.NONE then
+      sum = sum + value
     end
-
-    return sum
   end
+
+  return sum
+end
+
+local M = {}
+
+function M.setup(opts)
+  opts = opts or {}
+
+  local s = parseStyles(opts)
 
   -- Generic Highlighting
   Group.new('Normal', colors.gray_4, colors.nb_background)
