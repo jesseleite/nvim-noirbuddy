@@ -4,6 +4,7 @@ local Group = cb.Group
 local groups = cb.groups
 local colors = cb.colors
 
+-- TODO: Should these be in a "setup" function?
 Group.link('lualine_b_diff_added_normal', groups.DiffAdd)
 Group.link('lualine_b_diff_added_insert', groups.DiffAdd)
 Group.link('lualine_b_diff_added_visual', groups.DiffAdd)
@@ -59,3 +60,43 @@ Group.new('lualine_b_diagnostics_hint_replace', colors.diagnostic_hint)
 Group.new('lualine_b_diagnostics_hint_command', colors.diagnostic_hint)
 Group.new('lualine_b_diagnostics_hint_terminal', colors.diagnostic_hint)
 Group.new('lualine_b_diagnostics_hint_inactive', colors.diagnostic_hint)
+
+local M = {}
+
+local c = require("noirbuddy.colors").all()
+
+M.theme = {
+  normal = {
+    a = { fg = c.gray_2, bg = c.gray_8, gui = "bold" },
+    b = { fg = c.gray_3, bg = c.gray_9 },
+    c = { fg = c.gray_3, bg = c.gray_8 },
+  },
+  insert = { a = { fg = c.black, bg = c.gray_2, gui = "bold" } },
+  visual = { a = { fg = c.black, bg = c.primary, gui = "bold" } },
+  replace = { a = { fg = c.black, bg = c.gray_1, gui = "bold" } },
+  inactive = {
+    a = { fg = c.gray_1, bg = c.black },
+    b = { fg = c.gray_1, bg = c.black },
+    c = { fg = c.gray_1, bg = c.black },
+  },
+}
+
+M.sections = {
+  lualine_a = { 'mode' },
+  lualine_b = { 'branch', 'diff', { 'diagnostics', color = { bg = c.black } } },
+  lualine_c = { 'filename' },
+  lualine_x = { 'encoding', { 'filetype', colored = false } },
+  lualine_y = { 'progress' },
+  lualine_z = { 'location' }
+}
+
+M.inactive_sections = {
+  lualine_a = {},
+  lualine_b = {},
+  lualine_c = { 'filename' },
+  lualine_x = { 'location' },
+  lualine_y = {},
+  lualine_z = {}
+}
+
+return M
