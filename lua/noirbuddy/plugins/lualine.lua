@@ -63,17 +63,17 @@ Group.new('lualine_b_diagnostics_hint_inactive', colors.diagnostic_hint)
 
 local M = {}
 
-local c = require("noirbuddy.colors").all()
+local c = require('noirbuddy.colors').all()
 
 M.theme = {
   normal = {
-    a = { fg = c.gray_2, bg = c.gray_8, gui = "bold" },
+    a = { fg = c.gray_2, bg = c.gray_8, gui = 'bold' },
     b = { fg = c.gray_3, bg = c.gray_9 },
     c = { fg = c.gray_3, bg = c.gray_8 },
   },
-  insert = { a = { fg = c.black, bg = c.gray_2, gui = "bold" } },
-  visual = { a = { fg = c.black, bg = c.primary, gui = "bold" } },
-  replace = { a = { fg = c.black, bg = c.gray_1, gui = "bold" } },
+  insert = { a = { fg = c.black, bg = c.gray_2, gui = 'bold' } },
+  visual = { a = { fg = c.black, bg = c.primary, gui = 'bold' } },
+  replace = { a = { fg = c.black, bg = c.gray_1, gui = 'bold' } },
   inactive = {
     a = { fg = c.gray_1, bg = c.black },
     b = { fg = c.gray_1, bg = c.black },
