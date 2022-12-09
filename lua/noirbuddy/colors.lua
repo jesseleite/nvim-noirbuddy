@@ -25,7 +25,7 @@ function M.setup(opts)
   local preset = M.getPreset(opts.preset or 'minimal')
 
   local getConfiguredColor = function(color)
-    return opts[color] or preset[color]
+    return opts.colors and opts.colors[color] or preset[color]
   end
 
   -- Set up background color
