@@ -99,7 +99,10 @@ function M.setup(opts)
   Group.new('VisualNOS', colors.primary, colors.gray_8)
   Group.new('WarningMsg', colors.primary)
   Group.new('WildMenu', colors.gray_5, colors.gray_8)
-  -- TODO: This section needs work for sure
+
+  -- Telescope colors
+  Group.new('TelescopeBorder', colors.gray_7)
+  Group.new('TelescopeTitle', colors.gray_2)
 
   -- Treesitter Syntax Highlighting
   -- See :help treesitter-highlight-groups
