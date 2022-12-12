@@ -15,7 +15,7 @@ function M.all()
   local c = {}
 
   for name,_ in pairs(colors) do
-    c[name] = colors[name]:to_vim()
+    c[string.gsub(name, '^nb_', '')] = colors[name]:to_vim()
   end
 
   return c;
