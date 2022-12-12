@@ -100,10 +100,6 @@ function M.setup(opts)
   Group.new('WarningMsg', colors.primary)
   Group.new('WildMenu', colors.gray_5, colors.gray_8)
 
-  -- Telescope colors
-  Group.new('TelescopeBorder', colors.gray_7)
-  Group.new('TelescopeTitle', colors.gray_2)
-
   -- Treesitter Syntax Highlighting
   -- See :help treesitter-highlight-groups
   Group.new('@include', colors.gray_6)
