@@ -4,7 +4,6 @@ local styles = require('colorbuddy').styles
 
 -- We need this function because we can't do styles.NONE + styles.NONE (we need to ensure it's only added once)
 local parseStyles = function(opts)
-  -- TODO: Should this be included with the presets?
   opts["styles"] = opts["styles"] or {
     italic = false,
     undercurl = false,
