@@ -1,4 +1,3 @@
--- TODO: Requires testing and fine-tuning
 local cb = require('colorbuddy')
 
 local Group = cb.Group
