@@ -8,6 +8,7 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 - [Selecting Presets](#selecting-presets)
 - [Customizing Your Theme](#customizing-your-theme)
 - [Customizing Semantic Colors](#customizing-semantic-colors)
+- [Customizing Styles](#customizing-styles)
 - [Customizing Highlight Groups](#customizing-highlight-groups)
 - [Exporting Colors](#exporting-colors)
 - [Thank You](#thank-you)
@@ -121,6 +122,21 @@ require("noirbuddy").setup {
     diff_add = '#f5f5f5',
     diff_change = '#737373',
     diff_delete = '#EC0034',
+  },
+}
+```
+
+## Customizing Styles
+
+Some highlight groups (ie. inline diagnostics) are set up so that you can opt-in to certain styles (though which styles completely depends on the highlight group, and these are all disabled by default):
+
+```lua
+require("noirbuddy").setup {
+  styles = {
+    italic = true,
+    bold = false,
+    underline = false,
+    undercurl = true,
   },
 }
 ```
