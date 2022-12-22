@@ -2,26 +2,17 @@ local Group = require('colorbuddy').Group
 local colors = require('colorbuddy').colors
 local styles = require('colorbuddy').styles
 
--- We need this function because we can't do styles.NONE + styles.NONE (we need to ensure it's only added once)
-local parseStyles = function(opts)
-  opts["styles"] = opts["styles"] or {
-    italic = false,
-    undercurl = false,
-    underline = false,
-    bold = false,
+local parseStyleOpts = function(opts)
+  return {
+    italic = vim.tbl_get(opts, 'styles', 'italic') and styles.italic or styles.NONE,
+    bold = vim.tbl_get(opts, 'styles', 'bold') and styles.bold or styles.NONE,
+    underline = vim.tbl_get(opts, 'styles', 'underline') and styles.underline or styles.NONE,
+    undercurl = vim.tbl_get(opts, 'styles', 'undercurl') and styles.undercurl or styles.NONE,
   }
-
-  local s = {
-    italic = opts["styles"]["italic"] and styles.italic or styles.NONE,
-    undercurl = opts["styles"]["undercurl"] and styles.undercurl or styles.NONE,
-    underline = opts["styles"]["underline"] and styles.underline or styles.NONE,
-    bold = opts["styles"]["bold"] and styles.bold or styles.NONE,
-  }
-
-  return s
 end
 
-local sumStyleValues = function(values)
+-- We need this function because we can't do styles.NONE + styles.NONE (we need to ensure it's only added once)
+local sumStyles = function(values)
   local sum = styles.NONE;
 
   for _, value in ipairs(values) do
@@ -38,7 +29,7 @@ local M = {}
 function M.setup(opts)
   opts = opts or {}
 
-  local s = parseStyles(opts)
+  local s = parseStyleOpts(opts)
 
   -- Generic Highlighting
   Group.new('Normal', colors.gray_4, colors.nb_background)
@@ -164,10 +155,10 @@ function M.setup(opts)
   -- TODO: This section needs work for sure
 
   -- Semantic Highlighting
-  Group.new('DiagnosticError', colors.diagnostic_error, nil, sumStyleValues({ s.italic, s.undercurl }))
-  Group.new('DiagnosticWarn', colors.diagnostic_warning, nil, sumStyleValues({ s.italic, s.undercurl }))
-  Group.new('DiagnosticInfo', colors.diagnostic_info, nil, sumStyleValues({ s.italic, s.undercurl }))
-  Group.new('DiagnosticHint', colors.diagnostic_hint, nil, sumStyleValues({ s.italic, s.undercurl }))
+  Group.new('DiagnosticError', colors.diagnostic_error, nil, sumStyles({ s.bold, s.italic, s.undercurl }))
+  Group.new('DiagnosticWarn', colors.diagnostic_warning, nil, sumStyles({ s.bold, s.italic, s.undercurl }))
+  Group.new('DiagnosticInfo', colors.diagnostic_info, nil, sumStyles({ s.bold, s.italic, s.undercurl }))
+  Group.new('DiagnosticHint', colors.diagnostic_hint, nil, sumStyles({ s.bold, s.italic, s.undercurl }))
   Group.new('DiagnosticSignError', colors.diagnostic_error)
   Group.new('DiagnosticSignWarn', colors.diagnostic_warning)
   Group.new('DiagnosticSignInfo', colors.diagnostic_info)
