@@ -1,7 +1,7 @@
 -- Inspired by Dimitar Dimitrov's "Noirblaze" theme, from whence "Noirbuddy" was birthed <3
 return {
   primary = '#ff0088',
-  secondary = '#a7a7a7',
+  secondary = '#d5d5d5',
   diagnostic_error = '#EC0034',
   diagnostic_warning = '#ff7700',
   diagnostic_info = '#d5d5d5',
