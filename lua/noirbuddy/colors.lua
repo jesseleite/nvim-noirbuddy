@@ -52,18 +52,17 @@ function M.setup(opts)
 
   -- Set up grayscale palette
   -- The rest of the theme is based on this grayscale palette, hence the name 'noir' buddy
-  -- TODO: Should we rename all of the "grey" colors to something more genereic, so that it would make sense in the context of themes that don't use grey but are still monochrome
-  Color.new('black', '#121212')
-  Color.new('gray_9', '#212121')
-  Color.new('gray_8', '#323232')
-  Color.new('gray_7', '#535353')
-  Color.new('gray_6', '#737373')
-  Color.new('gray_5', '#949494')
-  Color.new('gray_4', '#a7a7a7')
-  Color.new('gray_3', '#b4b4b4')
-  Color.new('gray_2', '#d5d5d5')
-  Color.new('gray_1', '#f5f5f5')
-  Color.new('white', '#ffffff')
+  Color.new('black', getConfiguredColor('black') or '#121212')
+  Color.new('gray_9', getConfiguredColor('gray_9') or '#212121')
+  Color.new('gray_8', getConfiguredColor('gray_8') or '#323232')
+  Color.new('gray_7', getConfiguredColor('gray_7') or '#535353')
+  Color.new('gray_6', getConfiguredColor('gray_6') or '#737373')
+  Color.new('gray_5', getConfiguredColor('gray_5') or '#949494')
+  Color.new('gray_4', getConfiguredColor('gray_4') or '#a7a7a7')
+  Color.new('gray_3', getConfiguredColor('gray_3') or '#b4b4b4')
+  Color.new('gray_2', getConfiguredColor('gray_2') or '#d5d5d5')
+  Color.new('gray_1', getConfiguredColor('gray_1') or '#f5f5f5')
+  Color.new('white', getConfiguredColor('white') or '#ffffff')
 end
 
 return M
