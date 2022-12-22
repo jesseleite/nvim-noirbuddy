@@ -145,10 +145,10 @@ function M.setup(opts)
   Group.new('@text.todo', colors.gray_2)
   Group.new('@text.underline', colors.gray_2)
   Group.new('@text.uri', colors.gray_2)
-  Group.new('@type', colors.secondary)
+  Group.new('@type', colors.gray_2)
   Group.new('@type.builtin', colors.gray_6)
   Group.new('@type.definition', colors.gray_2)
-  Group.new('@variable', colors.gray_2)
+  Group.new('@variable', colors.secondary)
   Group.new('@variable.builtin', colors.gray_2)
 
   -- Semantic Highlighting
