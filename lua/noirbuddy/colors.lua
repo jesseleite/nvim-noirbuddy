@@ -30,8 +30,7 @@ function M.setup(opts)
 
   -- Set up background color
   -- Can be configured by preset or end user
-  -- TODO: Should we prefix all of our colors with `nb_`, at least while colorbuddy has reserved words?
-  -- TODO: Can we eventually change to `background` if we PR a fix to colorbuddy?
+  -- TODO: This will eventually change to `background` when we PR a fix to colorbuddy (since `background` is currently reserved)
   Color.new('nb_background', getConfiguredColor('background') or '#121212')
 
   -- Set up primary and secondary flavor colors
