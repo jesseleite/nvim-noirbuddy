@@ -93,17 +93,16 @@ Or even the base grayscale palette:
 ```lua
 require("noirbuddy").setup {
   colors = {
-    black = '#121212',
-    gray_9 = '#212121',
-    gray_8 = '#323232',
-    gray_7 = '#535353',
-    gray_6 = '#737373',
-    gray_5 = '#949494',
-    gray_4 = '#a7a7a7',
-    gray_3 = '#b4b4b4',
-    gray_2 = '#d5d5d5',
-    gray_1 = '#f5f5f5',
-    white = '#ffffff',
+    noir_0 = '#ffffff',
+    noir_1 = '#f5f5f5',
+    noir_2 = '#d5d5d5',
+    noir_3 = '#b4b4b4',
+    noir_4 = '#a7a7a7',
+    noir_5 = '#949494',
+    noir_6 = '#737373',
+    noir_7 = '#535353',
+    noir_8 = '#323232',
+    noir_9 = '#212121',
   },
 }
 ```
@@ -152,11 +151,11 @@ local Color, colors, Group, groups, styles = require('colorbuddy').setup {}
 -- Override specific highlight groups...
 Group.new('TelescopeTitle', colors.primary)
 Group.new('TelescopeBorder', colors.secondary)
-Group.new('CursorLineNr', colors.primary, colors.gray_9)
+Group.new('CursorLineNr', colors.primary, colors.noir_9)
 Group.new('Searchlight', nil, colors.secondary)
-Group.new('@comment', colors.gray_7)
-Group.new('@punctuation', colors.gray_2)
-Group.new('@constant', colors.gray_2)
+Group.new('@comment', colors.noir_7)
+Group.new('@punctuation', colors.noir_2)
+Group.new('@constant', colors.noir_2)
 
 -- Link highlight groups...
 Group.link('SignifySignAdd', groups.DiffAdd)
@@ -179,9 +178,9 @@ local noirbuddy = require('noirbuddy.colors').all()
 --   primary = "#e4609b",
 --   secondary = "#47bac0",
 --   background = "#18181a",
---   gray0 = "#282c34",
---   gray1 = "#282a2e",
---   gray2 = "#373b41",
+--   noir_0 = "#ffffff",
+--   noir_1 = "#f5f5f5",
+--   noir_2 = "#d5d5d5",
 --   -- etc.
 -- }
 ```

@@ -3,10 +3,10 @@ local cb = require('colorbuddy')
 local Group = cb.Group
 local colors = cb.colors
 
-Group.new("gitcommitComment", colors.gray_6)
-Group.new("gitcommitOnBranch", colors.gray_6)
-Group.new("gitcommitHeader", colors.gray_4)
-Group.new("gitcommitOnBranch", colors.gray_5)
+Group.new("gitcommitComment", colors.noir_6)
+Group.new("gitcommitOnBranch", colors.noir_6)
+Group.new("gitcommitHeader", colors.noir_4)
+Group.new("gitcommitOnBranch", colors.noir_5)
 Group.new("gitcommitSelectedType", colors.primary)
 Group.new("gitcommitSelectedFile", colors.primary)
 Group.new("gitcommitDiscardedType", colors.white)
