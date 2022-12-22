@@ -67,23 +67,23 @@ local c = require('noirbuddy.colors').all()
 
 M.theme = {
   normal = {
-    a = { fg = c.gray_2, bg = c.gray_8, gui = 'bold' },
-    b = { fg = c.gray_3, bg = c.gray_9 },
-    c = { fg = c.gray_3, bg = c.gray_8 },
+    a = { fg = c.noir_2, bg = c.noir_8, gui = 'bold' },
+    b = { fg = c.noir_3, bg = c.noir_9 },
+    c = { fg = c.noir_3, bg = c.noir_8 },
   },
-  insert = { a = { fg = c.black, bg = c.gray_2, gui = 'bold' } },
-  visual = { a = { fg = c.black, bg = c.primary, gui = 'bold' } },
-  replace = { a = { fg = c.black, bg = c.gray_1, gui = 'bold' } },
+  insert = { a = { fg = c.background, bg = c.noir_2, gui = 'bold' } },
+  visual = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
+  replace = { a = { fg = c.background, bg = c.noir_1, gui = 'bold' } },
   inactive = {
-    a = { fg = c.gray_1, bg = c.black },
-    b = { fg = c.gray_1, bg = c.black },
-    c = { fg = c.gray_1, bg = c.black },
+    a = { fg = c.noir_1, bg = c.background },
+    b = { fg = c.noir_1, bg = c.background },
+    c = { fg = c.noir_1, bg = c.background },
   },
 }
 
 M.sections = {
   lualine_a = { 'mode' },
-  lualine_b = { 'branch', 'diff', { 'diagnostics', color = { bg = c.black } } },
+  lualine_b = { 'branch', 'diff', { 'diagnostics', color = { bg = c.background } } },
   lualine_c = { 'filename' },
   lualine_x = { 'encoding', { 'filetype', colored = false } },
   lualine_y = { 'progress' },
