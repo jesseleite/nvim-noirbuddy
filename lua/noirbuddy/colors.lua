@@ -49,7 +49,7 @@ function M.setup(opts)
   Color.new('diff_change', getConfiguredColor('diff_change'))
   Color.new('diff_delete', getConfiguredColor('diff_delete'))
 
-  -- Set up grayscale palette
+  -- Set up noir grayscale palette
   -- The rest of the theme is based on this grayscale palette, hence the name 'noir' buddy
   -- TODO: By default, 0 is light and 9 is dark (or you can invert this for light themes with `light = true` in your setup or preset config)
   Color.new('noir_0', getConfiguredColor('noir_0') or '#ffffff')
@@ -62,6 +62,22 @@ function M.setup(opts)
   Color.new('noir_7', getConfiguredColor('noir_7') or '#535353')
   Color.new('noir_8', getConfiguredColor('noir_8') or '#323232')
   Color.new('noir_9', getConfiguredColor('noir_9') or '#212121')
+
+  -- Invert noir grayscale palette for light themes?
+  -- WARNING: Feeling experimental, might delete later 💅
+  if opts.light then
+    local c = M.all()
+    Color.new('noir_0', c.noir_9)
+    Color.new('noir_1', c.noir_8)
+    Color.new('noir_2', c.noir_7)
+    Color.new('noir_3', c.noir_6)
+    Color.new('noir_4', c.noir_5)
+    Color.new('noir_5', c.noir_4)
+    Color.new('noir_6', c.noir_3)
+    Color.new('noir_7', c.noir_2)
+    Color.new('noir_8', c.noir_1)
+    Color.new('noir_9', c.noir_0)
+  end
 end
 
 return M
