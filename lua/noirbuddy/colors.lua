@@ -7,8 +7,8 @@ function M.getPreset(preset)
   return require('noirbuddy.presets.' .. preset)
 end
 
-function M.mergeWithPreset(preset, colors)
-  return vim.tbl_extend('force', M.getPreset(preset), colors)
+function M.mergeWithPreset(preset, merge)
+  return vim.tbl_extend('force', M.getPreset(preset), merge)
 end
 
 function M.all()
