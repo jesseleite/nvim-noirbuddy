@@ -157,15 +157,15 @@ Though most are automatic, certain plugins may require you to opt-in...
 - [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
     ```lua
-    local noirbuddy = require('noirbuddy.plugins.lualine')
+    local noirbuddy_lualine = require('noirbuddy.plugins.lualine')
 
     require('lualine').setup {
       options = {
-        theme = noirbuddy.theme,
+        theme = noirbuddy_lualine.theme,
         -- ...
       },
-      sections = noirbuddy.sections,
-      inactive_sections = noirbuddy.inactive_sections,
+      sections = noirbuddy_lualine.sections,
+      inactive_sections = noirbuddy_lualine.inactive_sections,
       -- ...
     }
     ```
