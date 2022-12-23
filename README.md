@@ -61,6 +61,10 @@ require('noirbuddy').setup {
 }
 ```
 
+### Available Presets
+
+![](presets.png)
+
 ## Customizing Your Theme
 
 You can configure a custom `primary` color like so:
