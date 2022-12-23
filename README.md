@@ -144,6 +144,8 @@ require("noirbuddy").setup {
 }
 ```
 
+> If you want more granular control over font styles, check out the [customizing highlight grups](#customizing-highlight-groups) section.
+
 ## Customizing Third Party Plugins
 
 ### Included Configs
@@ -191,7 +193,10 @@ Group.new('CursorLineNr', colors.primary, colors.noir_9)
 Group.new('Searchlight', nil, colors.secondary)
 Group.new('@comment', colors.noir_7)
 Group.new('@punctuation', colors.noir_2)
-Group.new('@constant', colors.noir_2)
+
+-- Add font styles to highlight groups...
+Group.new('@constant', colors.noir_2, nil, styles.bold)
+Group.new('@method', colors.noir_0, nil, styles.bold + styles.italic)
 
 -- Link highlight groups...
 Group.link('SignifySignAdd', groups.DiffAdd)
