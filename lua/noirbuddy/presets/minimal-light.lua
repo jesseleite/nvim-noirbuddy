@@ -1,0 +1,23 @@
+-- TODO: Whipped this up super quickly as a proof of concept, but it needs love
+return {
+  background = '#ffffff',
+  primary = '#DF1681',
+  secondary = '#323232',
+  noir_0 = '#212121',
+  noir_1 = '#323232',
+  noir_2 = '#434343',
+  noir_3 = '#565656',
+  noir_4 = '#636363',
+  noir_5 = '#707070',
+  noir_6 = '#7D7D7D',
+  noir_7 = '#929292',
+  noir_8 = '#A3A3A3',
+  noir_9 = '#b4b4b4',
+  diagnostic_error = '#EC0034',
+  diagnostic_warning = '#ff7700',
+  diagnostic_info = '#d5d5d5',
+  diagnostic_hint = '#f5f5f5',
+  diff_add = '#f5f5f5',
+  diff_change = '#737373',
+  diff_delete = '#EC0034',
+}
