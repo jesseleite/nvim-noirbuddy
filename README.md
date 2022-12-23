@@ -8,7 +8,11 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 - [Selecting Presets](#selecting-presets)
 - [Customizing Your Theme](#customizing-your-theme)
 - [Customizing Semantic Colors](#customizing-semantic-colors)
-- [Customizing Styles](#customizing-styles)
+- [Customizing Font Styles](#customizing-font-styles)
+- [Customizing Third Party Plugins](#customizing-third-party-plugins)
+    - [Included Configs](#included-configs)
+    - [Opt-In Configs](#opt-in-configs)
+    - [Contributions](#contributions)
 - [Customizing Highlight Groups](#customizing-highlight-groups)
 - [Exporting Colors](#exporting-colors)
 - [Thank You](#thank-you)
@@ -125,9 +129,9 @@ require("noirbuddy").setup {
 }
 ```
 
-## Customizing Styles
+## Customizing Font Styles
 
-Some highlight groups (ie. inline diagnostics) are set up so that you can opt-in to certain styles (though which styles completely depends on the highlight group, and these are all disabled by default):
+Some highlight groups (ie. inline diagnostics) are set up so that you can opt-in to certain font styles (though which styles completely depends on the highlight group, and these are all disabled by default):
 
 ```lua
 require("noirbuddy").setup {
@@ -139,6 +143,38 @@ require("noirbuddy").setup {
   },
 }
 ```
+
+## Customizing Third Party Plugins
+
+### Included Configs
+
+Noirbuddy automatically themes several [plugins](https://github.com/jesseleite/nvim-noirbuddy/tree/master/lua/noirbuddy/plugins) out of the box (ie. [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim), [vim-fugitive](https://github.com/tpope/vim-fugitive), [harpoon](https://github.com/ThePrimeagen/harpoon), etc.), but also allows for [customizing highlight groups](#customizing-highlight-groups) and [exporting colors](#exporting-colors) so that you can have full control over every aspect when it comes to theming third party plugins.
+
+### Opt-In Configs
+
+Though most are automatic, certain plugins may require you to opt-in...
+
+- [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+    ```lua
+    local noirbuddy = require('noirbuddy.plugins.lualine')
+
+    require('lualine').setup {
+      options = {
+        theme = noirbuddy.theme,
+        -- ...
+      },
+      sections = noirbuddy.sections,
+      inactive_sections = noirbuddy.inactive_sections,
+      -- ...
+    }
+    ```
+
+    > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/master/nvim/lua/c/lualine.lua) for a fully fleshed out lualine example!
+
+### Contributions
+
+If you use a plugin that you think should be included in this repo, [PR's](https://github.com/jesseleite/nvim-noirbuddy/pulls) are welcome 🤘
 
 ## Customizing Highlight Groups
 
