@@ -1,5 +1,23 @@
 -- Inspired by green CRTs of yore <3
-return require('noirbuddy.colors').mergeWithPreset('minimal', {
-  primary = '#00FF00',
+return {
   background = '#1f241f',
-})
+  primary = '#00FF00',
+  secondary = '#E9F5E9',
+  noir_0 = '#E9F5E9',
+  noir_1 = '#D5E0D5',
+  noir_2 = '#9AA69A',
+  noir_3 = '#808B80',
+  noir_4 = '#707970',
+  noir_5 = '#616861',
+  noir_6 = '#4F584F',
+  noir_7 = '#3D463D',
+  noir_8 = '#303630',
+  noir_9 = '#282E28',
+  diagnostic_error = '#ff0038',
+  diagnostic_warning = '#FFA227',
+  diagnostic_info = '#00FF00',
+  diagnostic_hint = '#00FF00',
+  diff_add = '#00FF00',
+  diff_change = '#FFA227',
+  diff_delete = '#ff0038',
+}

@@ -1,5 +1,23 @@
 -- Inspired by amber CRTs of yore <3
-return require('noirbuddy.colors').mergeWithPreset('minimal', {
-  primary = '#FFA227',
+return {
   background = '#231814',
-})
+  primary = '#FFA227',
+  secondary = '#D2C5BE',
+  noir_0 = '#D2C5BE',
+  noir_1 = '#CABEB7',
+  noir_2 = '#B2A7A1',
+  noir_3 = '#948B86',
+  noir_4 = '#7D7571',
+  noir_5 = '#67605D',
+  noir_6 = '#56504E',
+  noir_7 = '#49423F',
+  noir_8 = '#3C3633',
+  noir_9 = '#2E2421',
+  diagnostic_error = '#ff0038',
+  diagnostic_warning = '#FFA227',
+  diagnostic_info = '#FFA227',
+  diagnostic_hint = '#FFA227',
+  diff_add = '#00FF00',
+  diff_change = '#FFA227',
+  diff_delete = '#ff0038',
+}
