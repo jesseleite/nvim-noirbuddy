@@ -5,5 +5,5 @@ local colors = require('colorbuddy').colors
 Group.new('TelescopeTitle', colors.noir_2)
 Group.new('TelescopeBorder', colors.noir_7)
 Group.new('TelescopeResultsNormal', colors.noir_5)
-Group.new('TelescopeMatching', colors.white)
+Group.new('TelescopeMatching', colors.noir_0)
 Group.new('TelescopePromptCounter', colors.noir_8, nil)
