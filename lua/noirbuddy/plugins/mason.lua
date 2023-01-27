@@ -1,13 +1,15 @@
 local cb = require('colorbuddy')
 
 local Group = cb.Group
+local groups = cb.groups
 local colors = cb.colors
 
 -- highlight reference:
 -- https://github.com/williamboman/mason.nvim/blob/main/lua/mason/ui/colors.lua
 
 -- general
-Group.new('MasonNormal', colors.secondary, colors.nb_background)
+Group.link('MasonNormal', groups.Normal)
+
 Group.new('MasonHeader', colors.secondary, colors.noir_9)
 Group.new('MasonHeaderSecondary', colors.secondary)
 
