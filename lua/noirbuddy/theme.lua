@@ -90,8 +90,8 @@ function M.setup(opts)
   Group.new('WarningMsg', colors.primary)
   Group.new('WildMenu', colors.noir_5, colors.noir_8)
 
-  Group.new('FloatBorder', colors.white)
-  Group.new('FloatTitle', colors.white)
+  Group.new('FloatBorder', colors.noir_0)
+  Group.new('FloatTitle', colors.noir_0)
   Group.new('NormalFloat', colors.noir_4)
 
   -- Treesitter Syntax Highlighting
