@@ -74,9 +74,9 @@ M.theme = {
     b = { fg = c.noir_3, bg = c.noir_9 },
     c = { fg = c.noir_3, bg = c.noir_8 },
   },
-  insert = { a = { fg = c.background, bg = c.noir_2, gui = 'bold' } },
-  visual = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
-  replace = { a = { fg = c.background, bg = c.noir_1, gui = 'bold' } },
+  insert = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
+  visual = { a = { fg = c.background, bg = c.secondary, gui = 'bold' } },
+  replace = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
   inactive = {
     a = { fg = c.noir_1, bg = c.background },
     b = { fg = c.noir_1, bg = c.background },
