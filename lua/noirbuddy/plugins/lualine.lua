@@ -63,6 +63,9 @@ Group.new('lualine_b_diagnostics_hint_inactive', colors.diagnostic_hint)
 
 local M = {}
 
+-- Lualine requires hex codes,
+-- But colorbuddy doesn't output hex codes,
+-- So we use noirbuddy's `all()` method to get hex codes :)
 local c = require('noirbuddy.colors').all()
 
 M.theme = {
