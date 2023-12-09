@@ -38,10 +38,18 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 
     ```lua
     {
-        'jesseleite/nvim-noirbuddy',
-        name = 'noirbuddy',
-        priority = 1000,
-        dependencies = { 'tjdevries/colorbuddy.nvim', branch = 'dev' },
+      "jesseleite/nvim-noirbuddy",
+      name = "noirbuddy",
+      lazy = false,
+      priority = 1000,
+      dependencies = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+      config = function()
+        -- load the colorscheme here
+        vim.cmd.colorscheme("noirbuddy")
+        require("noirbuddy").setup({
+            preset = "slate",
+        })
+      end,
     }
     ```
 
@@ -71,8 +79,6 @@ require('noirbuddy').setup {
   preset = 'miami-nights',
 }
 ```
-
-> *Note:* with `lazy.nvim`, you must set the colorschme (`vim.cmd.colorscheme 'noirbuddy'`) before calling `.setup()`
 
 ### Available Presets
 
