@@ -38,18 +38,15 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 
     ```lua
     {
-      "jesseleite/nvim-noirbuddy",
-      name = "noirbuddy",
+      'jesseleite/nvim-noirbuddy',
+      dependencies = {
+        { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+      },
       lazy = false,
       priority = 1000,
-      dependencies = { "tjdevries/colorbuddy.nvim", branch = "dev" },
-      config = function()
-        -- load the colorscheme here
-        vim.cmd.colorscheme("noirbuddy")
-        require("noirbuddy").setup({
-            preset = "slate",
-        })
-      end,
+      opts = {
+        -- All of your `setup(opts)` will go here
+      },
     }
     ```
 
@@ -61,6 +58,8 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
     ```
 
 2. Enable the colorscheme in your lua config:
+
+    > ***Note:** You can skip this step if you're using [lazy.nvim](https://github.com/folke/lazy.nvim)!*
 
     ```lua
     require("noirbuddy").setup()
