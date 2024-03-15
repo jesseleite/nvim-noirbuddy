@@ -23,6 +23,8 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 
 1. Install using your favourite package manager:
 
+    > ***Breaking changes:** If you were previously using colorbuddy's `dev` branch, please switch to master!*
+
     **Using [packer.nvim](https://github.com/wbthomason/packer.nvim):**
 
     ```lua
