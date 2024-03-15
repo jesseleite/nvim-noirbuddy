@@ -11,7 +11,7 @@ Group.new('TitleString', colors.secondary)
 Group.new('TitleSymbol', colors.primary)
 Group.new('TitleIcon', colors.primary)
 Group.new('SagaBorder', colors.noir_7)
-Group.new('SagaNormal', nil, colors.nb_background)
+Group.new('SagaNormal', nil, colors.background)
 Group.new('SagaExpand', colors.diff_delete)
 Group.new('SagaCollapse', colors.diff_delete)
 Group.new('SagaBeacon', colors.primary)
@@ -24,15 +24,15 @@ Group.new('FinderSelection', colors.primary)
 Group.new('FinderFileName', colors.noir_5)
 Group.new('FinderIcon', colors.secondary)
 Group.new('FinderType', colors.secondary)
-Group.new('FinderCount', colors.secondary, colors.nb_background)
+Group.new('FinderCount', colors.secondary, colors.background)
 -- finder spinner
 Group.new('FinderSpinnerTitle', colors.primary)
 Group.new('FinderSpinner', colors.primary)
 Group.new('FinderVirtText', colors.noir_7)
 -- hover
-Group.new('HoverNormal', colors.primary, colors.nb_background)
+Group.new('HoverNormal', colors.primary, colors.background)
 -- rename
-Group.new('RenameNormal', colors.primary, colors.nb_background)
+Group.new('RenameNormal', colors.primary, colors.background)
 -- diagnostic
 Group.new('DiagnosticSource', colors.primary)
 Group.new('DiagnosticPos', colors.noir_7)
@@ -43,4 +43,4 @@ Group.new('CallHierarchyTitle', colors.secondary)
 -- outline
 Group.new('OutlineIndent', colors.noir_7)
 -- terminal
-Group.new('TerminalNormal', colors.secondary, colors.nb_background)
+Group.new('TerminalNormal', colors.secondary, colors.background)

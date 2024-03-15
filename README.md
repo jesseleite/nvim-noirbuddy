@@ -23,14 +23,12 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
 
 1. Install using your favourite package manager:
 
-    > ***Note:** You'll need to use colorbuddy's `dev` branch for now, but that'll change to `master` in time...*
-
     **Using [packer.nvim](https://github.com/wbthomason/packer.nvim):**
 
     ```lua
     use {
       "jesseleite/nvim-noirbuddy",
-      requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
+      requires = { "tjdevries/colorbuddy.nvim" }
     }
     ```
 
@@ -40,7 +38,7 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
     {
       'jesseleite/nvim-noirbuddy',
       dependencies = {
-        { 'tjdevries/colorbuddy.nvim', branch = 'dev' }
+        { 'tjdevries/colorbuddy.nvim' }
       },
       lazy = false,
       priority = 1000,
@@ -53,7 +51,7 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
     **Using [vim-plug](https://github.com/junegunn/vim-plug):**
 
     ```vim
-    Plug 'tjdevries/colorbuddy.nvim', { 'branch': 'dev' }
+    Plug 'tjdevries/colorbuddy.nvim'
     Plug 'jesseleite/nvim-noirbuddy'
     ```
 

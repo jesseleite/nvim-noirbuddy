@@ -32,12 +32,12 @@ function M.setup(opts)
   local s = parseStyleOpts(opts)
 
   -- Generic Highlighting
-  Group.new('Normal', colors.noir_4, colors.nb_background)
+  Group.new('Normal', colors.noir_4, colors.background)
   Group.new('Search', colors.noir_9, colors.noir_0)
   Group.new('IncSearch', colors.noir_9, colors.noir_0)
   Group.new('Visual', nil, colors.noir_8)
-  Group.new('SignColumn', nil, colors.nb_background)
-  Group.new('LineNr', colors.noir_8, colors.nb_background)
+  Group.new('SignColumn', nil, colors.background)
+  Group.new('LineNr', colors.noir_8, colors.background)
   Group.new("EndOfBuffer", colors.noir_8, nil)
 
   Group.new('Comment', colors.noir_7)

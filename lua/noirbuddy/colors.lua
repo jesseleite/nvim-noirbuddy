@@ -15,7 +15,7 @@ function M.all()
   local c = {}
 
   for name,_ in pairs(colors) do
-    c[string.gsub(name, '^nb_', '')] = colors[name]:to_vim()
+    c[name] = colors[name]:to_vim()
   end
 
   return c;
@@ -30,8 +30,7 @@ function M.setup(opts)
 
   -- Set up background color
   -- Can be configured by preset or end user
-  -- TODO: This will eventually change to `background` when we PR a fix to colorbuddy (since `background` is currently reserved)
-  Color.new('nb_background', getConfiguredColor('background'))
+  Color.new('background', getConfiguredColor('background'))
 
   -- Set up primary and secondary flavor colors
   -- Can be configured by preset or end user
