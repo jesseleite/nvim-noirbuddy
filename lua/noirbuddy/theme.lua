@@ -65,6 +65,7 @@ function M.setup(opts)
   Group.new('DiffText', colors.noir_0, colors.noir_7)
   Group.new('ErrorMsg', colors.noir_1, colors.primary)
   Group.new('VertSplit', colors.noir_8, colors.noir_9)
+  Group.new('WinSeparator', colors.noir_8, colors.noir_9)
 
   Group.new('Folded', colors.noir_5, colors.noir_8)
   Group.new('FoldColumn', colors.noir_5, colors.noir_8)
