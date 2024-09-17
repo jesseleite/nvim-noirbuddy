@@ -196,7 +196,7 @@ Though most are automatic, certain plugins may require you to opt-in...
     }
     ```
 
-    > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/master/nvim/lua/c/lualine.lua) for a fully fleshed out lualine example!
+    > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/master/nvim/lua/plugins/lualine.lua) for a fully fleshed out lualine example!
 
 ### Contributions
 
