@@ -83,6 +83,12 @@ require('noirbuddy').setup {
 
 ![](presets.png)
 
+> [!CAUTION]
+> When using lazy.nvim, you **must** use the `install = { colorscheme = { "noirbuddy" }
+> }` configuration option to set the usage of noirbuddy. Use of `vim.opt.colorscheme`
+> breaks custom configuration loading including presets. See [lazy.nvim's
+> configuration](https://lazy.folke.io/configuration) for more details.
+
 ## Customizing Your Theme
 
 You can configure a custom `primary` color like so:
