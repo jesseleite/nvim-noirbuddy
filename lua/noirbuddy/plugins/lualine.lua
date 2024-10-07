@@ -70,9 +70,9 @@ local c = require('noirbuddy.colors').all()
 
 M.theme = {
   normal = {
-    a = { fg = c.noir_2, bg = c.noir_8, gui = 'bold' },
-    b = { fg = c.noir_3, bg = c.noir_9 },
-    c = { fg = c.noir_3, bg = c.noir_8 },
+    a = { fg = c.noir_2, bg = c.noir_7, gui = 'bold' },
+    b = { fg = c.noir_3, bg = c.noir_8 },
+    c = { fg = c.noir_3, bg = c.noir_9 },
   },
   insert = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
   visual = { a = { fg = c.background, bg = c.secondary, gui = 'bold' } },
@@ -86,9 +86,9 @@ M.theme = {
 
 M.sections = {
   lualine_a = { 'mode' },
-  lualine_b = { 'branch', 'diff', { 'diagnostics', color = { bg = c.background } } },
+  lualine_b = { 'branch', 'diff' },
   lualine_c = { { 'filename', path = 1 } },
-  lualine_x = { 'encoding', { 'filetype', colored = false } },
+  lualine_x = { 'diagnostics', 'encoding', { 'filetype', colored = false } },
   lualine_y = { 'progress' },
   lualine_z = { 'location' }
 }
