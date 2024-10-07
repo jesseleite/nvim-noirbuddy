@@ -70,13 +70,13 @@ local c = require('noirbuddy.colors').all()
 
 M.theme = {
   normal = {
-    a = { fg = c.noir_2, bg = c.noir_7, gui = 'bold' },
+    a = { fg = c.noir_2, bg = c.noir_7 },
     b = { fg = c.noir_3, bg = c.noir_8 },
     c = { fg = c.noir_3, bg = c.noir_9 },
   },
-  insert = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
-  visual = { a = { fg = c.background, bg = c.secondary, gui = 'bold' } },
-  replace = { a = { fg = c.background, bg = c.primary, gui = 'bold' } },
+  insert = { a = { fg = c.background, bg = c.primary } },
+  visual = { a = { fg = c.background, bg = c.secondary } },
+  replace = { a = { fg = c.background, bg = c.primary } },
   inactive =    {
     a = { fg = c.noir_6, bg = c.noir_9 },
     b = { fg = c.noir_6, bg = c.noir_9 },
