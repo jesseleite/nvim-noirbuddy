@@ -19,13 +19,19 @@ Group.new('MiniStatuslineInactive', colors.noir_6, colors.noir_9)
 
 local M = {}
 
--- Always use relative filename where possible, and space out modified and readonly flags
+-- Always use relative filename where possible, and space out modified/readonly flag
 M.section_filename = function()
   if vim.bo.buftype == 'terminal' then
     return '%t'
   end
 
-  return '%f %m %r'
+  local path = vim.fn.expand('%:~:.')
+
+  if path == '' then
+    return '%f %m'
+  end
+
+  return path .. ' %m'
 end
 
 -- A more minimal file info section
