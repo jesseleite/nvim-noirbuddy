@@ -86,7 +86,7 @@ require('noirbuddy').setup {
 > [!CAUTION]
 > If using lazy.nvim, avoid setting `vim.opt.colorscheme` altogether, as it can cause issues with loading your configured
 > noirbuddy presets. Instead, you may use the `install = { colorscheme = { "noirbuddy" } }` configuration option.
-> See [lazy.nvim's configuration](https://lazy.folke.io/configuration) for more details. 
+> See [lazy.nvim's configuration](https://lazy.folke.io/configuration) for more details.
 
 ## Customizing Your Theme
 
@@ -185,7 +185,23 @@ Noirbuddy automatically themes several [plugins](https://github.com/jesseleite/n
 
 Though most are automatic, certain plugins may require you to opt-in...
 
-- [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [mini.statusline](https://github.com/echasnovski/mini.statusline)
+
+    ```lua
+    local noirbuddy_statusline = require('noirbuddy.plugins.mini-statusline')
+
+    require('mini.statusline').setup {
+      content = {
+        active = noirbuddy_statusline.active,
+        inactive = noirbuddy_statusline.inactive,
+      },
+      -- ...
+    }
+    ```
+
+    > Installing [mini.icons](https://github.com/echasnovski/mini.icons) is also recommended! Check out [@jesseleite's mini.statusline config](https://github.com/jesseleite/dotfiles/blob/7549a7823069de41a5895746cb2bcb32f5fd4b5b/nvim/lua/jl/plugins/mini-statusline.lua) for a fully fleshed out example.
+
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
     ```lua
     local noirbuddy_lualine = require('noirbuddy.plugins.lualine')
@@ -201,7 +217,7 @@ Though most are automatic, certain plugins may require you to opt-in...
     }
     ```
 
-    > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/master/nvim/lua/plugins/lualine.lua) for a fully fleshed out lualine example!
+    > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/4d5c489fd158692bb4f1713f0424d994df73bc8e/nvim/lua/plugins/lualine.lua) for a fully fleshed out example config!
 
 ### Contributions
 
