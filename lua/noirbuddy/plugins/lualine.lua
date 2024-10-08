@@ -88,7 +88,7 @@ M.sections = {
   lualine_a = { 'mode' },
   lualine_b = { 'branch', 'diff' },
   lualine_c = { { 'filename', path = 1 } },
-  lualine_x = { 'diagnostics', 'encoding', { 'filetype', colored = false } },
+  lualine_x = { 'diagnostics', { 'filetype', colored = false }, 'encoding' },
   lualine_y = { 'progress' },
   lualine_z = { 'location' }
 }
