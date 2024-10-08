@@ -18,6 +18,6 @@ return {
   diagnostic_info = "#00d992",
   diagnostic_hint = "#00d992",
   diff_add = "#00d992",
-  diff_change = "#b4b4b4",
+  diff_change = "#90a7f8",
   diff_delete = "#fa5e86",
 }
