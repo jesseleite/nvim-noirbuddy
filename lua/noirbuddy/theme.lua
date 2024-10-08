@@ -33,9 +33,9 @@ function M.setup(opts)
 
   -- Generic Highlighting
   Group.new('Normal', colors.noir_4, colors.background)
-  Group.new('Search', colors.background, colors.primary)
-  Group.new('IncSearch', colors.background, colors.primary)
-  Group.new('CurSearch', colors.noir_9, colors.noir_0)
+  Group.new('Search', nil, colors.noir_8)
+  Group.new('IncSearch', nil, colors.noir_8)
+  Group.new('CurSearch', colors.noir_9, colors.noir_2)
   Group.new('Visual', nil, colors.noir_8)
   Group.new('SignColumn', nil, colors.background)
   Group.new('LineNr', colors.noir_8, colors.background)
@@ -160,7 +160,6 @@ function M.setup(opts)
   Group.new('@lsp.type.function', colors.noir_0)
   Group.new('@lsp.type.macro', colors.primary)
   Group.new('@lsp.type.method', colors.noir_2)
-
 
   -- Semantic Highlighting
   Group.new('DiagnosticError', colors.diagnostic_error, nil, sumStyles({ s.bold, s.italic, s.undercurl }))
