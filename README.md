@@ -183,9 +183,11 @@ Noirbuddy automatically themes several [plugins](https://github.com/jesseleite/n
 
 ### Opt-In Configs
 
-Though most are automatic, certain plugins may require you to opt-in...
+Though noirbuddy handles highlight groups automatically, certain plugins may require you to opt-in to more opinionated lua-based theme configs...
 
 - [mini.statusline](https://github.com/echasnovski/mini.statusline)
+
+    ![](screenshots/mini-statusline.png)
 
     ```lua
     local noirbuddy_statusline = require('noirbuddy.plugins.mini-statusline')
@@ -202,6 +204,8 @@ Though most are automatic, certain plugins may require you to opt-in...
     > Installing [mini.icons](https://github.com/echasnovski/mini.icons) is also recommended! Check out [@jesseleite's mini.statusline config](https://github.com/jesseleite/dotfiles/blob/7549a7823069de41a5895746cb2bcb32f5fd4b5b/nvim/lua/jl/plugins/mini-statusline.lua) for a fully fleshed out example.
 
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+
+    ![](screenshots/lualine.png)
 
     ```lua
     local noirbuddy_lualine = require('noirbuddy.plugins.lualine')
