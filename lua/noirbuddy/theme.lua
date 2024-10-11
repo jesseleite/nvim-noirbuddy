@@ -48,6 +48,11 @@ function M.setup(opts)
 
   local s = parseStyleOpts(opts)
 
+  -- Text on Primary / Secondary Background Colors
+  -- NOTE: Experimental! Might not stay!
+  Group.new('NoirbuddyTextOnPrimary', textOnColor(colors.primary), colors.primary)
+  Group.new('NoirbuddyTextOnSecondary', textOnColor(colors.secondary), colors.secondary)
+
   -- Generic Highlighting
   Group.new('Normal', colors.noir_4, colors.background)
   Group.new('Search', nil, colors.noir_8)
