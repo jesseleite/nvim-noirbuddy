@@ -82,7 +82,7 @@ function M.setup(opts)
   Group.new('DiffChange', colors.noir_0, colors.noir_8)
   Group.new('DiffDelete', colors.secondary, colors.noir_8)
   Group.new('DiffText', colors.noir_0, colors.noir_7)
-  Group.new('ErrorMsg', colors.noir_1, colors.primary)
+  Group.new('ErrorMsg', textOnColor(colors.diagnostic_error), colors.diagnostic_error)
   Group.new('VertSplit', colors.noir_8, colors.noir_9)
   Group.new('WinSeparator', colors.noir_8, colors.noir_9)
 
