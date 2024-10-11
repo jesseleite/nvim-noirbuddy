@@ -24,6 +24,23 @@ local sumStyles = function(values)
   return sum
 end
 
+-- Dynamically determine best text color for a given background color
+local textOnColor = function(color)
+  local r, g, b = require('colorbuddy.util').hsl_to_rgb(color.base.H, color.base.S, color.base.L)
+
+  r = r * 255
+  g = g * 255
+  b = b * 255
+
+  local luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255 -- Thx colorizer.nvim! <3
+
+  if luminance > 0.5 then
+    return colors.black
+  else
+    return colors.white
+  end
+end
+
 local M = {}
 
 function M.setup(opts)

@@ -62,6 +62,10 @@ function M.setup(opts)
   Color.new('noir_7', getConfiguredColor('noir_7'))
   Color.new('noir_8', getConfiguredColor('noir_8'))
   Color.new('noir_9', getConfiguredColor('noir_9'))
+
+  -- Pure black and white for text on dynamic background colors
+  Color.new('black', '#000000')
+  Color.new('white', '#FFFFFF')
 end
 
 return M
