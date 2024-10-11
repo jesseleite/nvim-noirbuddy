@@ -58,7 +58,7 @@ function M.setup(opts)
   -- Generic Highlighting
   Group.new('Normal', colors.noir_4, colors.background)
   Group.new('Search', nil, colors.noir_8)
-  Group.new('IncSearch', nil, colors.noir_8)
+  Group.new('IncSearch', colors.noir_0, colors.noir_7)
   Group.new('Substitute', nil, colors.noir_8)
   Group.new('CurSearch', colors.noir_9, colors.noir_2)
   Group.new('Visual', nil, colors.noir_8)
