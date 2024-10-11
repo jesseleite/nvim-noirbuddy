@@ -32,7 +32,9 @@ local textOnColor = function(color)
   g = g * 255
   b = b * 255
 
-  local luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255 -- Thx colorizer.nvim! <3
+  -- Thx colorizer.nvim and stack overflow! <3
+  -- https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
+  local luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
 
   if luminance > 0.5 then
     return colors.black
