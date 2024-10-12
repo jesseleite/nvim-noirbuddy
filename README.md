@@ -1,6 +1,6 @@
 # Noirbuddy
 
-A highly customizable minimalist monochromatic colorscheme building framework for Neovim 🖤
+A highly customizable minimalist theme building framework for Neovim 🖤
 
 Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a monochromatic base palette, and the ability to set a flavor color or two 💅
 
