@@ -223,6 +223,17 @@ Though noirbuddy handles highlight groups automatically, certain plugins may req
 
     > Check out [@n1ghtmare's lualine config](https://github.com/n1ghtmare/dotfiles/blob/4d5c489fd158692bb4f1713f0424d994df73bc8e/nvim/lua/plugins/lualine.lua) for a fully fleshed out example config!
 
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+
+    ```lua
+    require('cmp').setup {
+      window = require('noirbuddy.plugins.cmp').window,
+      -- ...
+    }
+    ```
+
+    > Nvim-cmp's default documentation popup is based off of Neovim's default float highlights, so it can be hard to read over top of your code window. This custom `window` config is recommended, as it adds unique highlight groups for Noirbuddy to style.
+
 ### Contributions
 
 If you use a plugin that you think should be included in this repo, [PR's](https://github.com/jesseleite/nvim-noirbuddy/pulls) are welcome 🤘
