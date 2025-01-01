@@ -7,6 +7,7 @@ function M.setup(opts)
 end
 
 function M.load()
+  vim.api.nvim_command("highlight clear")
   vim.api.nvim_command("set termguicolors")
   vim.api.nvim_command(string.format("set background=%s", "dark"))
 
