@@ -6,13 +6,15 @@ function M.setup(opts)
   M.options = opts
 end
 
-function M.load()
+function M.load(opts)
+  opts = vim.tbl_extend("force", M.options, opts or {})
+
   vim.api.nvim_command("highlight clear")
   vim.api.nvim_command("set termguicolors")
   vim.api.nvim_command(string.format("set background=%s", "dark"))
 
-  require("noirbuddy.colors").setup(M.options)
-  require("noirbuddy.theme").setup(M.options)
+  require("noirbuddy.colors").setup(opts)
+  require("noirbuddy.theme").setup(opts)
   require("noirbuddy.plugins")
   require("noirbuddy.languages")
 
