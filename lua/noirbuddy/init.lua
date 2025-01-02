@@ -18,6 +18,10 @@ function M.load(opts)
   require("noirbuddy.plugins")
   require("noirbuddy.languages")
 
+  if opts.custom ~= nil then
+    opts.custom(require("colorbuddy"))
+  end
+
   vim.api.nvim_command(string.format('let g:colors_name = "%s"', "noirbuddy"))
 end
 
