@@ -57,7 +57,7 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
     Plug 'jesseleite/nvim-noirbuddy'
     ```
 
-2. Enable the colorscheme in your lua config:
+2. Setup the colorscheme in your lua config:
 
     > ***Note:** You can skip this step if you're using [lazy.nvim](https://github.com/folke/lazy.nvim)!*
 
@@ -65,7 +65,13 @@ Built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), with a
     require("noirbuddy").setup()
     ```
 
-3. Order pizza! 🍕 🤘 😎
+3. Enable the colorscheme in your lua config:
+
+    ```lua
+    vim.cmd.colorscheme("noirbuddy")
+    ```
+
+4. Order pizza! 🍕 🤘 😎
 
 ## Selecting Presets
 
@@ -82,11 +88,6 @@ require('noirbuddy').setup {
 ### Available Presets
 
 ![](presets.png)
-
-> [!CAUTION]
-> If using lazy.nvim, avoid setting `vim.opt.colorscheme` altogether, as it can cause issues with loading your configured
-> noirbuddy presets. Instead, you may use the `install = { colorscheme = { "noirbuddy" } }` configuration option.
-> See [lazy.nvim's configuration](https://lazy.folke.io/configuration) for more details.
 
 ## Customizing Your Theme
 
@@ -173,7 +174,7 @@ require("noirbuddy").setup {
 }
 ```
 
-> If you want more granular control over font styles, check out the [customizing highlight grups](#customizing-highlight-groups) section.
+> If you want more granular control over font styles, check out the [customizing highlight groups](#customizing-highlight-groups) section.
 
 ## Customizing Third Party Plugins
 
@@ -240,30 +241,31 @@ If you use a plugin that you think should be included in this repo, [PR's](https
 
 ## Customizing Highlight Groups
 
-Since Noirbuddy is built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), you can use its API to customize specific highlight groups as needed:
+Since Noirbuddy is built on [colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim), you can use its API to customize specific highlight groups as needed. To do this, define a function `custom`, where the param `c` is the colorbuddy module:
 
 ```lua
--- Require colorbuddy...
-local Color, colors, Group, groups, styles = require('colorbuddy').setup {}
+require("noirbuddy").setup {
+  custom = function(c)
+  -- Override specific highlight groups...
+  c.Group.new('TelescopeTitle', c.colors.primary)
+  c.Group.new('TelescopeBorder', c.colors.secondary)
+  c.Group.new('CursorLineNr', c.colors.primary, c.colors.noir_9)
+  c.Group.new('Searchlight', nil, c.colors.secondary)
+  c.Group.new('@comment', c.colors.noir_7)
+  c.Group.new('@punctuation', c.colors.noir_2)
 
--- Override specific highlight groups...
-Group.new('TelescopeTitle', colors.primary)
-Group.new('TelescopeBorder', colors.secondary)
-Group.new('CursorLineNr', colors.primary, colors.noir_9)
-Group.new('Searchlight', nil, colors.secondary)
-Group.new('@comment', colors.noir_7)
-Group.new('@punctuation', colors.noir_2)
+  -- Add font styles to highlight groups...
+  c.Group.new('@constant', c.colors.noir_2, nil, c.styles.bold)
+  c.Group.new('@method', c.colors.noir_0, nil, c.styles.bold + c.styles.italic)
 
--- Add font styles to highlight groups...
-Group.new('@constant', colors.noir_2, nil, styles.bold)
-Group.new('@method', colors.noir_0, nil, styles.bold + styles.italic)
+  -- Link highlight groups...
+  c.Group.link('SignifySignAdd', c.groups.DiffAdd)
+  c.Group.link('SignifySignChange', c.groups.DiffChange)
+  c.Group.link('SignifySignDelete', c.groups.DiffDelete)
 
--- Link highlight groups...
-Group.link('SignifySignAdd', groups.DiffAdd)
-Group.link('SignifySignChange', groups.DiffChange)
-Group.link('SignifySignDelete', groups.DiffDelete)
-
--- etc.
+  -- etc.
+  end
+}
 ```
 
 ## Exporting Colors
