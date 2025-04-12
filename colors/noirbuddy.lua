@@ -1,1 +1,1 @@
-require('noirbuddy').setup()
+require("noirbuddy").load()
