@@ -198,6 +198,9 @@ function M.setup(opts)
   Group.new('DiffAdd', colors.diff_add)
   Group.new('DiffChange', colors.diff_change)
   Group.new('DiffDelete', colors.diff_delete)
+
+  -- Override Colorbuddy Defaults
+  Group.new('string', colors.primary)
 end
 
 return M
